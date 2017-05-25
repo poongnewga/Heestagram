@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<!-- <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -26,4 +26,30 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "devise/shared/links" %> -->
+<div class="container bd-main">
+  <div class="dv-box">
+    <div class="dv-container">
+      <p class="dv-title"><span style="font-family: 'Bilbo Swash Caps'; font-size: 4rem;">Heestagram</span> <i class="fa fa-instagram" aria-hidden="true"></i></p>
+      <br>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <div class="field">
+          <div class="field-box">
+            <%= f.email_field :email, class: "dv-email", placeholder: " Email", autofocus: true %><br>
+            <%= f.text_field :name, class: "dv-name", placeholder: " 이름" %><br>
+            <% if @minimum_password_length %>
+              <%= f.password_field :password, class: "dv-pw", placeholder: " 비밀번호(#{@minimum_password_length}자리 이상)", autocomplete: "off" %><br>
+            <% else%>
+              <%= f.password_field :password, class: "dv-pw", placeholder: " 비밀번호", autocomplete: "off" %><br>
+            <% end %>
+            <%= f.password_field :password_confirmation, class: "dv-pw", placeholder: " 비밀번호(재입력)", autocomplete: "off" %>
+            <%= f.submit "회원가입", class: "dv-btn" %>
+          </div>
+        </div>
+      <% end %>
+      <br>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

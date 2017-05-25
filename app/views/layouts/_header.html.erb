@@ -6,15 +6,17 @@
   </div>
   <div class="h-link">
     <div class="h-link-c">
-      <label for="fds-tog">
-        <i class="fa fa-address-book-o" aria-hidden="true"></i>
-      </label>
-      <label for="np-tog">
-        <i class="fa fa-pencil" aria-hidden="true"></i>
-      </label>
-      <label for="hb-tog">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </label>
+      <% if current_user %>
+        <label for="fds-tog">
+          <i class="fa fa-address-book-o" aria-hidden="true"></i>
+        </label>
+        <label for="np-tog">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </label>
+        <label for="hb-tog">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </label>
+      <% end%>
     </div>
   </div>
 </header>
