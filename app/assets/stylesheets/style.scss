@@ -1,7 +1,14 @@
 @import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
 @import url("https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps");
 $main-font: 'Noto Sans KR', sans-serif;
+// 모든 파일에 추가할 것
 $brand-font: 'Bilbo Swash Caps';
+$main-color1: rgb(160, 0, 47);
+$main-color2: rgb(139,0,41);
+$line-color: #9a9a9a;
+$border: 1px solid #9a9a9a;
+
+// 여기까지
 
 * {
   margin: 0;
@@ -9,4 +16,12 @@ $brand-font: 'Bilbo Swash Caps';
   box-sizing: border-box;
   text-decoration: none;
   font-family: $main-font;
+}
+
+div.dam {
+  height: 3rem;
+}
+
+label {
+  cursor: pointer;
 }

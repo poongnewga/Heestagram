@@ -1,0 +1,31 @@
+// 모든 파일에 추가할 것
+$brand-font: 'Bilbo Swash Caps';
+$main-color1: rgb(160, 0, 47);
+$main-color2: rgb(139,0,41);
+$line-color: #9a9a9a;
+$border: 1px solid #9a9a9a;
+
+// 여기까지
+
+input#hb-tog {
+  display: none;
+  &:checked + div.hb {
+    left: 0vw;
+    top: 0vh;
+  }
+}
+
+
+div.hb {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: $main-color2;
+  display: block;
+  position: fixed;
+  left: 100vw;
+  top: 0vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  transition-duration: 0.5s;
+}
