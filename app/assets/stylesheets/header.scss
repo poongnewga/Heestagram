@@ -32,7 +32,9 @@ header.h {
 
     div.h-main-c {
       font-size: 1.5rem;
-      font-family: $brand-font;
+      a {
+        font-family: $brand-font;
+      }
     }
   }
 
@@ -46,6 +48,10 @@ header.h {
 
     div.h-link-c {
       font-size: 1.5rem;
+      label {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+      }
     }
   }
 }

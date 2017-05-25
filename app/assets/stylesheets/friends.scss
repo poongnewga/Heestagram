@@ -6,23 +6,21 @@ $line-color: #9a9a9a;
 $border: 1px solid #9a9a9a;
 
 // 여기까지
-input#hb-tog {
+input#fds-tog {
   display: none;
-  &:checked + div.hb {
+  &:checked + div.fds {
     left: 0vw;
     top: 0vh;
   }
 }
-
-
-div.hb {
+div.fds {
   width: 100vw;
   height: 100vh;
   color: white;
   background-color: $main-color2;
   display: block;
   position: fixed;
-  left: 100vw;
+  left: -100vw;
   top: 0vh;
   padding-top: 3rem;
   padding-bottom: 3rem;
