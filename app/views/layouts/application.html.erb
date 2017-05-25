@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<!-- Use Kor -->
+<html lang="ko">
   <head>
     <title>Heestagram</title>
     <%= csrf_meta_tags %>
+
+    <!-- Added by HEEHAM -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!-- Loading page -->
+    <div id="loading"></div>
+
+    <%= render "layouts/header" %>
+
     <%= yield %>
+
+    <%= render "layouts/footer" %>
+
   </body>
 </html>
