@@ -47,3 +47,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added by HEEHAM
+gem 'devise', '~> 4.3'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'carrierwave', '~> 1.1'
+gem 'fog-aws', '~> 1.3'
