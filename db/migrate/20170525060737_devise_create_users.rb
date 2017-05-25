@@ -2,9 +2,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
-
+      # 디폴트 값을 삭제해 저장되지 않게 하였음.
+      t.string :email,              null: false
+      t.string :encrypted_password, null: false
+      t.string :name, null: false
+      
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
