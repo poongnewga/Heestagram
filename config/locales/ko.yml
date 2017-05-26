@@ -54,3 +54,20 @@ ko:
       not_found: 찾을 수 없습니다.
       not_locked: (은)는 잠기지 않았습니다.
       not_saved: '%{count}개의 오류로 인해 %{resource} 저장이 금지 되었습니다.'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: 공백불가
+              taken: 중복
+            name:
+              blank: 공백불가
+              taken: 중복
+            password:
+              blank: 공백불가
+              too_short: 너무짧음
+            password_confirmation:
+              blank: 공백불가
+              confirmation: 비밀번호불일치

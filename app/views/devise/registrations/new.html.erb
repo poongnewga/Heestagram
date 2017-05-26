@@ -3,7 +3,63 @@
     <div class="dv-container">
 
       <p class="dv-title"><span style="font-family: 'Bilbo Swash Caps'; font-size: 4rem;">Heestagram</span> <i class="fa fa-instagram" aria-hidden="true"></i></p>
+
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+      <% if resource.errors.any? %>
+
+        <div id="error_explanation">
+          <% m = resource.errors.full_messages %>
+          <ul>
+          <% if m.include?("Email 공백불가") || m.include?("Name 공백불가") || m.include?("Password 공백불가") || m.include?("Password confirmation 공백불가") %>
+          <div>
+            <i class="fa fa-times-circle alert" aria-hidden="true"></i>
+            다음 항목을 반드시 입력해주세요. <br>
+            <% if m.include?("Email 공백불가") %>
+              <i class="fa fa-caret-right" aria-hidden="true"></i> Email&nbsp
+            <% end %>
+            <% if m.include?("Name 공백불가") %>
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 이름&nbsp
+            <% end %>
+            <% if m.include?("Password 공백불가") %>
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 비밀번호&nbsp
+            <% end %>
+            <% if m.include?("Password confirmation 공백불가") %>
+              <i class="fa fa-caret-right" aria-hidden="true"></i> 비밀번호 재입력&nbsp
+            <% end %>
+          </div>
+          <% end %>
+
+          <% if m.include?("Email 중복") || m.include?("Name 중복") %>
+          <div>
+            <i class="fa fa-times-circle alert" aria-hidden="true"></i>
+            중복인 항목이 있습니다.<br>
+            <% if m.include?("Email 중복") %>
+              <i class="fa fa-caret-right" aria-hidden="true"></i> Email&nbsp
+            <% end %>
+            <% if m.include?("Name 중복") %>
+              <i class="fa fa-caret-right" aria-hidden="true"></i> Name&nbsp
+            <% end %>
+          </div>
+          <% end %>
+
+          <% if m.include?("Password 너무짧음") %>
+          <div>
+            <i class="fa fa-times-circle alert" aria-hidden="true"></i>
+            비밀번호는 최소 6자리입니다.
+          </div>
+          <% end %>
+
+          <% if m.include?("Password confirmation 비밀번호불일치") %>
+            <div>
+              <i class="fa fa-times-circle alert" aria-hidden="true"></i>
+              비밀번호가 일치하지 않습니다.
+            </div>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
         <div class="field">
           <div class="field-box">
             <%= f.email_field :email, class: "dv-email", placeholder: " Email" %><br>
