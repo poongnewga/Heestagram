@@ -1,26 +1,38 @@
-<h2>Log in</h2>
+<div class="b-container">
+  <div class="dv-log">
+    <div class="dv-container">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <p class="dv-title"><span style="font-family: 'Bilbo Swash Caps'; font-size: 4rem;">Heestagram</span> <i class="fa fa-camera-retro" aria-hidden="true"></i></p>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <% flash.each do |key, value| %>
+        <% if (value == "이메일 또는 비밀번호가 일치하지 않습니다.") %>
+         <div class="flash alert <%= key %> <%= key %>"><%= value %></div>
+        <% end %>
+      <% end %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+
+        <div class="field-box">
+          <%= f.email_field :email, class: "dv-email", placeholder: " Email" %><br>
+          <%= f.password_field :password, class: "dv-pw", placeholder: " 비밀번호", autocomplete: "off" %>
+          <%= f.submit "로그인", class: "dv-btn" %>
+        </div>
+
+      </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div>
+            <%= f.check_box :remember_me, class: "dv-chk" %>
+            <label class="dv-chk-label" for="user_remember_me">로그인 유지</label>
+          </div>
+        <% end -%>
+      <% end %>
+      <br>
+      <%= render "devise/shared/links" %>
+
+
+
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
