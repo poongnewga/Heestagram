@@ -1,6 +1,8 @@
 # Heestagram - 고려대 미니 해커톤
 
-Heestagram은 Front-end를 공부하며 CSS3 Animation 및 JS를 활용해 mobile 환경에서 최대한 native look & feel을 구현하고자 한 프로젝트입니다.
+Heestagram은 Front-end를 공부하며 CSS3를 적극 활용하여 mobile 환경에서 최대한 native look & feel을 구현하고자 한 프로젝트입니다.
+
+JS는 겸손(Unobstrusive)하게 사용하는 것을 중점으로 뒀습니다.
 
 ![heestagram](./heesta.png)
 
