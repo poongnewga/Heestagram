@@ -2,6 +2,8 @@
 
 Heestagram은 Front-end를 공부하며 CSS3를 적극 활용하여 mobile 환경에서 최대한 native look & feel을 구현하고자 한 프로젝트입니다.
 
+여러 브라우저 간 차이를 최대한 고려하여 통일된 UI/UX를 구현하고자 했습니다.
+
 JS는 겸손(Unobstrusive)하게 사용하는 것을 중점으로 뒀습니다.
 
 ![heestagram](./heesta.png)
